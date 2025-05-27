@@ -19,43 +19,45 @@ Os dados foram simulados com `NumPy` e `Pandas` para representar cenários reali
 * `user_id`
 * `play_time`: tempo total de jogo (horas)
 * `sessions`: número de sessões jogadas
+* `avg_session_time`: tempo médio por sessão
 * `days_since_last_login`: dias desde o último login
 * `level`: nível atual do jogador
 * `in_game_purchases`: número de compras in-game
+* `total_matches`: número de partidas jogadas
+* `wins`: número de vitórias
+* `win_rate`: taxa de vitórias (wins / total\_matches)
 * `churned`: 1 se o jogador abandonou, 0 se está ativo
 
 ## 🛠️ Tecnologias e Ferramentas
 
 * Python (Pandas, NumPy)
 * Visualização: Matplotlib, Seaborn
-* Machine Learning: Scikit-learn
+* Machine Learning: Scikit-learn, XGBoost
 * Jupyter Notebook
 
-## 📐 Etapas do Projeto
+## 📐 Etapas do Projeto e Código
 
-1. **Definição do Problema**
-2. **Simulação de Base de Dados Realista**
-3. **Análise Exploratória de Dados (EDA)**
-4. **Preparação dos Dados**
-5. **Modelagem com ML (Logistic Regression e Random Forest)**
-6. **Avaliação de Desempenho**
-7. **Visualização e Interpretação dos Resultados**
+As etapas completas com códigos estão disponíveis no Jupyter Notebook:
+🔗 [Notebook no GitHub](https://github.com/martinez-ie/player_churn_prediction/blob/main/churn_games_completo.ipynb)
 
 ## 📊 Resultados
 
-* **Modelo Random Forest** alcançou acurácia de 100% na base simulada, com excelente capacidade de identificar jogadores churnados.
-* **Regressão Logística** apresentou desempenho razoável, mas com dificuldades em identificar casos de churn corretamente.
+* A **Regressão Logística** teve bom desempenho geral, mas com menor recall na classe de churn (0.55).
+* O modelo **Random Forest** alcançou 99% de acurácia e 91% de recall para churn.
+* O **XGBoost** teve desempenho excelente, com 99% de acurácia e também 91% de recall — o mesmo da Random Forest, mas com mais robustez e estabilidade.
 
-## 📅 Possíveis Expansões
+### Métricas de Destaque para XGBoost:
 
-* Aplicar SMOTE para balancear classes
-* Testar modelos como XGBoost
-* Adicionar novas variáveis: tempo médio por sessão, histórico de vitórias/derrotas
-* Criar dashboard interativo com Power BI
+* **Acurácia:** 99%
+* **Precision:** 100%
+* **Recall (churn):** 91%
+* **F1-score (churn):** 0.95
 
 ## 🎯 Conclusão
 
-O projeto demonstra como dados comportamentais podem ser usados para prever abandono em jogos. É uma prova de conceito valiosa para empresas do setor aplicarem modelos preditivos em suas estratégias de retenção.
+O projeto demonstra como dados comportamentais simulados podem ser usados para prever abandono em jogos. A introdução de variáveis como `avg_session_time` e `win_rate` aumentou o poder preditivo dos modelos.
+Modelos como **Random Forest** e **XGBoost** foram altamente eficazes, com destaque para o XGBoost por sua performance equilibrada.
+Essa abordagem pode ser usada por empresas do setor de games para criar estratégias de retenção baseadas em dados.
 
 ---
 
