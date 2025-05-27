@@ -59,4 +59,4 @@ O projeto demonstra como dados comportamentais podem ser usados para prever aban
 
 ---
 
-> Projeto desenvolvido por Ingrid Martinez | [LinkedIn](https://www.linkedin.com/in/ingridmartinez/) | [GitHub](https://github.com/martinez-ie)
+> Projeto desenvolvido por Ingrid Martinez | [LinkedIn](https://www.linkedin.com/in/ingridmartinezm/) | [GitHub](https://github.com/martinez-ie)
